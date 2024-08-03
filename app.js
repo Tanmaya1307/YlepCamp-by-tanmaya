@@ -20,7 +20,7 @@ const MongoStore = require("connect-mongo");
 const helmet = require("helmet");
 const app = express();
 
-const dbUrl = process.env.DB_URL;
+const dbUrl = process.env.DB_URL || "mongodb://127.0.0.1:27  017/new-Yelp-Camp";
 
 const connectDB = async() =>{
     await mongoose.connect(dbUrl)
@@ -33,7 +33,7 @@ const store = MongoStore.create({
     crypto: {
         secret: 'mysecret!'
     }
-}).catch(e => {
+}).catch((e)=>{
     console.error('Error connecting to MongoDB:', e);
 });
 
