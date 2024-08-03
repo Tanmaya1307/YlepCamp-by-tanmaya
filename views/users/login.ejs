@@ -1,0 +1,22 @@
+<% layout("/layout/boilerplate") %>
+<div class="row">
+    <div class="col-10 offset-1 col-sm-5 offset-sm-3 ">
+        <div class="card shadow mt-3 mb-3">
+            <img src="https://th.bing.com/th/id/OIP.NZ0Fgoa8cAcgOIdmtZvcgwHaEK?rs=1&pid=ImgDetMain" class="thumnail card-img-top" alt="">
+            <div class="card-body">
+                <h1>Login!</h1>
+                <form action="/login" method="post" class="validated-form" novalidate>
+                    <div>
+                        <label class="form-label" for="username">Username</label>
+                        <input class="form-control" type="text" id="username" name="username" required>
+                    </div>
+                    <div>
+                        <label class="form-label" for="password">Password</label>
+                        <input class="form-control" type="text" id="password" name="password" required>
+                    </div>
+                    <button class="btn btn-success mt-3 w-100">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
