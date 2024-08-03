@@ -33,8 +33,6 @@ const store = MongoStore.create({
     crypto: {
         secret: 'mysecret!'
     }
-}).catch((e)=>{
-    console.error('Error connecting to MongoDB:', e);
 });
 
 store.on("error",(e)=>{
